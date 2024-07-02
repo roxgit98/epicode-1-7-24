@@ -1,8 +1,8 @@
 import { Component } from "react";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Badge from "react-bootstrap/Badge";
-import CommentArea from "./CommentArea";
+import { Card, Col } from "react-bootstrap";
+
+// import Badge from "react-bootstrap/Badge";
+// import CommentArea from "./CommentArea";
 
 //  const SingleBook = (props) => (
 //    <Col xxl={4}>
@@ -34,7 +34,7 @@ class SingleBook extends Component {
       <Col xxl={4}>
         <Card>
           <Card.Img
-            // onClick={this.toggleSelected}
+            onClick={() => this.props.changeSelectedBook(this.props.book.asin)}
             variant="top"
             src={this.props.book.img}
             className="img-fluid"
